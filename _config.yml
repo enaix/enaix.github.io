@@ -23,6 +23,10 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://enaix.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 footer: 'github: <a href="https://github.com/enaix">~enaix</a>'
 
+header_pages:
+  - index.md
+  - about.md
+
 # Build settings
 remote_theme: b2a3e8/jekyll-theme-console
 #theme: jekyll-theme-console
