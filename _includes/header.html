@@ -4,7 +4,7 @@
     <div class="menu">
       <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
 
-      {%- if page.title -%}
+      {%- if page.is_page and page.title -%}
       <span class="title-text"> | {{ page.title }}</span>
       {%- endif -%}
 
