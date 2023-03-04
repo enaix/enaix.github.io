@@ -25,7 +25,7 @@ footer: 'github: <a href="https://github.com/enaix">~enaix</a>'
 
 # Build settings
 remote_theme: b2a3e8/jekyll-theme-console
-theme: jekyll-theme-console
+#theme: jekyll-theme-console
 style: light
 plugins:
   - jekyll-feed
