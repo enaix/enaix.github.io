@@ -65,7 +65,7 @@ vec3 dots(vec2 pos, vec3 dotcol, vec3 black, float a)
 
 
 
-This gives us the single dot at $$(x_0, y_0)$$, so we need to repeat the function along x and y axis to obtain the matrix of dots. The simpliest way to achieve this is by taking modulo from $$x$$ and $$y$$. `mod(x, n)` returns `(0, 1, 2, ..., n, 0, 1, 2, ...)`: if we pass the result of this function in the ellipse formula, we obtain the repetition of this ellipse with spacing n **anywhere** along the space. In the context of shaders, `mod` function takes floating point numbers aswell.
+This gives us the single dot at $$(x_0, y_0)$$, so we need to repeat the function along x and y axis to obtain the matrix of dots. The simpliest way to achieve this is by taking modulo from $$x$$ and $$y$$. `mod(x, n)` returns `(0, 1, 2, ..., n-1, 0, 1, 2, ...)`: if we pass the result of this function in the ellipse formula, we obtain the repetition of this ellipse with spacing n **anywhere** along the space. In the context of shaders, `mod` function takes floating point numbers aswell.
 
 ![dots shader function 2](/assets/img/dots/dots3.png)
 
