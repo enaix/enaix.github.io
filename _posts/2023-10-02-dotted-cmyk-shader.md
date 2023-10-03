@@ -101,7 +101,7 @@ The last point is the rotation of the dots. We want to rotate the whole space ov
 $$
 \begin{bmatrix}
 \cos{a} & \sin{a} \\
--\sin{a} & \cos(a)
+-\sin{a} & \cos{a}
 \end{bmatrix}
 \begin{bmatrix}
 x \\
@@ -282,7 +282,7 @@ if (dist > 0.01 && dist < 0.1 - cam_dist)
 
 In order to get random rotation for each color, we perform some 'hash' formula on the color r, g, b values.
 
-<video width="500" controls><source src="/assets/img/dots/spider5.mp4" type="video/mp4"></video>
+<video controls><source src="/assets/img/dots/spider5.mp4" type="video/mp4"></video>
 
 ## Repository
 
