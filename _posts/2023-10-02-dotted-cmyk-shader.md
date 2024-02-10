@@ -2,7 +2,7 @@
 layout: post
 title: Writing stylized dotted comic shader in Godot
 date:   2023-10-02 17:26:32 +0300
-calegories: shaders godot
+categories: shaders godot
 image:
     path: assets/img/dots/banner.png
     height: 1051
