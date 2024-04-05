@@ -1,6 +1,6 @@
 function fetchGitHubStars(repo_owner, repo_name) {
   return new Promise(function(resolve, reject) {
-    var cacheKey = `github_stars_${owner}_${repo}`;
+    var cacheKey = `github_stars_${repo_owner}_${repo_name}`;
     var cachedStars = sessionStorage.getItem(cacheKey);
     if (cachedStars !== null) {
       resolve(parseInt(cachedStars));
@@ -32,21 +32,17 @@ function toggleVisibility(elem, show)
 {
     if (show)
     {
-        elem.classList.add("stars-shown")
         elem.classList.remove("stars-hidden")
     }
     else
     {
-        elem.classList.remove("stars-shown")
         elem.classList.add("stars-hidden")
     }
 }
 
-// Example usage:
-// Owner and repo are passed to the script
-var owner = document.currentScript.getAttribute("owner");
-var repo = document.currentScript.getAttribute("repo");
-fetchGitHubStars(owner, repo)
+function executeFetch(owner, repo)
+{
+  fetchGitHubStars(owner, repo)
   .then(function(stars) {
     if (stars !== null) {
       console.log(`The repository ${owner}/${repo} has ${stars} stars.`);
@@ -70,3 +66,7 @@ fetchGitHubStars(owner, repo)
     console.error('Error fetching stars:', error);
     toggleVisibility(document.getElementById("div-" + repo), false);
   });
+}
+
+executeFetch(document.currentScript.getAttribute("owner"), document.currentScript.getAttribute("repo"));
+
