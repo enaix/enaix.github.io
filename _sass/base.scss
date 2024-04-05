@@ -100,8 +100,8 @@ textarea { vertical-align: top; }
 /**
  * JS
  */
-.stars-hidden {display: none;}
-.stars-shown {display: inline;}
+.stars-hidden {display: none!important;}
+.stars-display {display: inline;}
 .star-icon {width: 1em;}
 .stars-wrapper {font-size: 1.5rem;float: right;display: inline;text-align: bottom;font-size: 2rem;}
 
