@@ -2,6 +2,9 @@
 layout: post
 title: Writing stylized dotted comic shader in Godot
 date:   2023-10-02 17:26:32 +0300
+has_repo: true
+repo_author: enaix
+repo: godot-cmyk-dot-shader
 image:
     path: assets/img/dots/banner.png
     height: 1051

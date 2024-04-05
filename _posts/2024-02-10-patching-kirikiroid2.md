@@ -2,6 +2,9 @@
 layout: post
 title: Patching chinese adware from Kirikiroid2 apk
 categories: decompilation smali
+has_repo: true
+repo_author: enaix
+repo: Kirikiroid2-debloated
 image:
     path: assets/img/spy_shawk.png
     height: 900

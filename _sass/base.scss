@@ -38,11 +38,14 @@ p { font-family: $p-font-family; font-size: large; }
 .light-text { color: var(--text-color-minor) }
 .title-text { font-size: x-large; }
 .title-fit { font-size: 2rem; }
-.title { width: fit-content; }
+.title { width: fit-content;display: inline; }
 .bg-1 { background-color: var(--bg-1); }
 .bg-2 { background-color: var(--bg-2); }
 .footer-junk { display: inline; }
 main>mjx-container { margin: 50px; }
+.page-title-wrapper {margin-bottom: 20px;}
+.home-image {width: 30%;display: block;margin: 20px;}
+.home-title {font-size: 1.2rem;}
 
 /**
  * Layout
@@ -93,6 +96,18 @@ input[type=submit] { font-size: $base-font-size;  font-family: $base-font-family
 input[type=submit]:hover { color: var(--background-color); background-color: var(--base-color); }
 *:focus { outline: none; }
 textarea { vertical-align: top; }
+
+/**
+ * JS
+ */
+.stars-hidden {display: none;}
+.stars-shown {display: inline;}
+.star-icon {width: 1em;}
+.stars-wrapper {font-size: 1.5rem;float: right;display: inline;text-align: bottom;font-size: 2rem;}
+
+
+.post-title {border-top: var(--border);border-bottom: var(--border);margin-top: 20px;margin-bottom: 20px;padding-top: 5px;padding-bottom: 5px;}
+.post-stars {display: block; margin-top: 10px;}
 
 /**
  * Code and syntax highlighting
