@@ -17,6 +17,10 @@ image:
 
 You may find APK files at [Github](https://github.com/enaix/Kirikiroid2-debloated)
 
+
+### Note: the apk has also been patched to run on Android 14!
+
+
 ## Overview
 
 There are 2 available files: original `Kirikiroid2_1.3.9.apk` and patched `Kirikiroid2_yuri_1.3.9.apk`. We will be covering only the first one, because the differences are minimal.
