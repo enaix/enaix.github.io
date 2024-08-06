@@ -49,13 +49,13 @@ function executeFetch(owner, repo)
       
       toggleVisibility(document.getElementById("div-" + repo), true);
       document.getElementById("star-" + repo).innerHTML = stars;
-      if (stars % 10 == 1)
+      if (stars % 10 == 1 && stars % 100 != 11) // Ends with 1, but not with 11
       {
-        toggleVisibility(document.getElementById("star-s-" + repo), false);
+        toggleVisibility(document.getElementById("star-s-" + repo), false); // star
       }
       else
       {
-        toggleVisibility(document.getElementById("star-s-" + repo), true);
+        toggleVisibility(document.getElementById("star-s-" + repo), true); // stars
       }
     } else {
       console.log('Failed to fetch stars for repo ${owner}/${repo}');
