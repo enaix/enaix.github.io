@@ -1,0 +1,14 @@
+{
+    "theme": "base",
+    "themeVariables": {
+      "primaryColor": "#fbf1c7",
+      "primaryTextColor": "#000000",
+      "primaryBorderColor": "#d5c4a1",
+      "lineColor": "#000000",
+      "secondaryColor": "#fbf1c7",
+      "tertiaryColor": "#ebdbb2",
+      "secondaryTextColor": "#000000",
+      "tertiaryTextColor": "#000000"
+    },
+    "themeCSS": "#my-svg: {background-color: #0000!important;}"
+}

@@ -1,0 +1,8 @@
+flowchart LR;
+  CPU-->chip["Chipset I2C Controller"]
+  subgraph i2c ["SMBus (I2C) Bus"]
+  chip-->dram["SDRAM memory"]
+  dram-->spd["SPD control pin"]
+  spd-->spdmod["SPD controller"]
+  spd-->data["Lowest 0x80 bytes"]
+  end
