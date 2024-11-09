@@ -29,7 +29,7 @@ p, ul, ol { margin: 0px;  color: var(--text-color); }
 a { text-decoration: underline;  color: var(--link-color); }
 a:hover { color: var(--background-color); background-color: var(--base-color); }
 @media only screen and (max-device-width: 500px) { * { font-size: $mobile-font-size !important; } .footer-junk { display: none!important; } }
-img { width: 80%; }
+img { width: min(100%, 1000px); }
 p { font-family: $p-font-family; font-size: large; }
 
 /**
@@ -173,3 +173,62 @@ pre { background-color: var(--bg-1);  border: none;  padding: 0;  margin: 0;  ov
 .highlight .vg { color: var(--code-color-7); } /* Name.Variable.Global */
 .highlight .vi { color: var(--code-color-7); } /* Name.Variable.Instance */
 .highlight .il { color: var(--code-color-14); } /* Literal.Number.Integer.Long */
+
+
+// Zoom in effect (JS)
+
+/*.img .zoom-in
+{
+    position: absolute;
+    left: auto;
+    right: auto;
+    width: 95vw;
+}*/
+
+// Base styling
+
+main {
+    img {
+    //   width: 100%;
+        // border-radius: 8px;
+        transition: transform 0.3s ease, z-index 0s;
+    }
+    
+    :hover img:not(.active-img) {
+        transform: scale(1.05); // slight zoom on hover
+    }
+}
+
+.active-img {
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    z-index: 20;
+    background-color: var(--background-color);
+}
+  
+  // Overlay for enlarged image view
+  #overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.0); // dark background
+    //display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    cursor: pointer;
+    transition: transform .3s ease, background-color .3s ease;
+  
+    &.active {
+      display: flex;
+      background-color: rgba(0, 0, 0, 0.8); // dark background
+  
+      .enlarged-image {
+        transform: scale(1); // zoom effect
+      }
+    }
+  }
