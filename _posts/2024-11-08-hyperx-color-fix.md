@@ -20,6 +20,8 @@ Due to my new research project, I had to upgrade my rig for the first time - it 
 
 Since the sticks show this dimming issue in all modes, that's the incompatibility issue between old and new HyperX RGB controllers. To understand how this works, we need to understand how does the software communicate to the ram sticks.
 
+Another interesting problem is that ram sticks use optical sensors for syncing the clock between each other, and it seems that the position of these sensors is different on the newer ones. Due to this effect the color cycle effect desyncs after some time
+
 #### Controlling DRAM RGB
 
 ![dram i2c chart](/assets/img/dram_i2c-1.svg)
@@ -115,6 +117,10 @@ Don't forget to set `I2C_DEV` to the device address (may be found in OpenRGB dev
 Simply clone the repository and run `hyperx_ram_rgb.sh` script
 
 The first parameter is the hex code of the color (`#ffffff`), and the second one is the brightness (you may set it to `0xff`)
+
+---
+
+**So.. it seems that we have a win!** Although we get a significant decrease in brightness on max blue channel, the colors are pretty accurate.. But something is telling me that the bash script is not good enough, we need a better tool...
 
 ## OpenRGB Plugin
 

@@ -21,3 +21,33 @@ layout: default
   
 {%- endfor -%}
 {%- endif -%}
+
+<h2 class="title bg-1">./weekend_projects</h2>
+
+<div class="matrix">
+  <div class="col">
+    {% include icon_loader.html icon="ansible.svg" %}
+    <div class="matrix-info">
+      <span class="matrix-title">sing-box Ansible playbook</span>
+      <span class="matrix-subtitle">Deploy xray/trojan VPN server with ease</span>
+      
+    </div>
+    {% include go.html url="https://github.com/enaix/sing-box-ansible" %}
+  </div>
+  <div class="col">
+    {% include icon_loader.html icon="fish-sharp.svg" %}
+    <div class="matrix-info">
+      <span class="matrix-title">Kirikiroid2-debloated</span>
+      <span class="matrix-subtitle">Clean, Android 14+ compatible Kirikiroid2 fork</span>
+    </div>
+    {% include go.html url="https://github.com/enaix/Kirikiroid2-debloated" %}
+  </div>
+  <div class="col">
+    {% include icon_loader.html icon="nuclear.svg" %}
+    <div class="matrix-info">
+      <span class="matrix-title">./not_so_weekend_projects</span>
+      <span class="matrix-subtitle">on github</span>
+    </div>
+    {% include go.html url="https://github.com/enaix" %}
+  </div>
+</div>

@@ -175,17 +175,9 @@ pre { background-color: var(--bg-1);  border: none;  padding: 0;  margin: 0;  ov
 .highlight .il { color: var(--code-color-14); } /* Literal.Number.Integer.Long */
 
 
-// Zoom in effect (JS)
-
-/*.img .zoom-in
-{
-    position: absolute;
-    left: auto;
-    right: auto;
-    width: 95vw;
-}*/
-
-// Base styling
+/**
+ * Zoom in effect (JS)
+ */
 
 main {
     img {
@@ -194,7 +186,7 @@ main {
         transition: transform 0.3s ease, z-index 0s;
     }
     
-    :hover img:not(.active-img) {
+    :hover .img-hover:not(.active-img) {
         transform: scale(1.05); // slight zoom on hover
     }
 }
@@ -232,3 +224,88 @@ main {
       }
     }
   }
+
+/**
+ * Projects matrix
+ */
+
+ .matrix {
+  display: flex;
+  //flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px; /* Optional: space between rows */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: left;
+}
+
+.col {
+  width: min(20vw, 250px);
+  height: min(20vw, 250px);
+  min-width: 260px;
+  min-height: 260px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  //border: 1px solid #ddd;
+  box-sizing: border-box;
+  text-align: center;
+  border: var(--border);
+  //transition: color .3s ease, background-color .3s ease;
+  //margin-top: 20px;margin-bottom: 20px;padding-top: 5px;padding-bottom: 5px;
+}
+
+.col:hover {
+  color: var(--background-color);
+  background-color: var(--text-color);
+
+  .matrix-icon-wrapper>svg {
+    transform: scale(1.1);
+  }
+}
+
+.matrix-icon-wrapper {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.matrix-icon-wrapper>svg {
+  width: 4em;
+  transition: transform 0.2s ease;
+}
+
+.matrix-info {
+  // margin-top: auto;
+  margin-bottom: 10px;
+  min-height: 40%;
+}
+
+.matrix-title {
+  font-weight: bold;
+  margin: 5px 0;
+  display: block;
+}
+
+.matrix-subtitle {
+  font-weight: lighter;
+  display: block;
+}
+
+.matrix-link {
+  margin-top: auto;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+}
+
+.go-link {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  text-decoration: none;
+}
+
+.go-link:hover {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
