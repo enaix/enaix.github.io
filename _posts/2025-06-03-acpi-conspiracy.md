@@ -6,11 +6,11 @@ repo_author: enaix
 repo: sbsutil
 image: 
     path: assets/img/acpi.png
-    width: 512
-    height: 512
+    width: 1028
+    height: 514
 ---
 
-![acpi conspiracy](/assets/img/acpi.png)
+<img src="/assets/img/acpi.png" alt="acpi conspiracy" class="img-hover">
 
 *(Feel free to skip to the Bill Gates section for the non-technical part)*
 
@@ -54,7 +54,7 @@ These issues have already been discussed since the 2000s, and ACPI was [describe
 
 And then I accidentally found [this article on ACPI debugging](https://lwn.net/Articles/237085/), which references the [memo written by Bill Gates in 1999](https://web.archive.org/web/20070927015231/http://antitrust.slated.org/www.iowaconsumercase.org/011607/3000/PX03020.pdf):
 
-> One thing I find myself wondering about is whether we shouldn’t try and make the "ACPI" extensions somehow Windowsspecific. If seems unfortunate if we do this work and get our partners to do the work and the result is that Linux works great without having to do the work. ... Maybe we couid define the APIs so that they work well with NT and not the others even if they are open. Or maybe we could patent something relaled to this.
+> One thing I find myself wondering about is whether we shouldn’t try and make the "ACPI" extensions somehow Windows-specific. If seems unfortunate if we do this work and get our partners to do the work and the result is that Linux works great without having to do the work. ... Maybe we couid define the APIs so that they work well with NT and not the others even if they are open. Or maybe we could patent something relaled to this.
 
 What. The. Heck.
 
