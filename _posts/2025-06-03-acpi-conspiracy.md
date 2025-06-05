@@ -76,9 +76,9 @@ Wow, this blew up! Thanks a lot for the nice comments, it was pleasing to see al
 
 ### Trivia
 
-- This leaked document is a part of [Halloween documents](https://en.m.wikipedia.org/wiki/Halloween_documents)
-- As a result of [Iowa anti-monopaly class action lawsuit](https://en.m.wikipedia.org/wiki/Microsoft_litigation#cite_note-21), MS settled the case for $180M, which is only 0.3% of their [revenue in 2007](https://www.microsoft.com/investor/reports/ar07/staticversion/10k_sl_eng.html). This lawsuit seems not to be directly linked to the Halloween documents AFAIK
-- In EU, reverse engineeriny is not illegal if done properly (see clean room approach)
+- This leaked document is a part of [Halloween documents](https://en.m.wikipedia.org/wiki/Halloween_documents).
+- As a result of [Iowa anti-monopaly class action lawsuit](https://en.m.wikipedia.org/wiki/Microsoft_litigation#cite_note-21), MS settled the case for $180M, which is only 0.3% of their [revenue in 2007](https://www.microsoft.com/investor/reports/ar07/staticversion/10k_sl_eng.html). This lawsuit seems not to be directly linked to the Halloween documents AFAIK.
+- In EU, reverse engineering is not illegal if done properly (see clean room approach).
 
 Another engineer has encountered similar ACPI issues in the past, here's the link to his detailed guide on fixing DSDT tables: [antenore blogpost](https://antenore.simbiosi.org/fixing-broken-acpi-dsdt-linux/)
 
