@@ -68,4 +68,20 @@ This is not Valve's mistake for not setting up the SMBus communications, but rat
 
 ---
 
-I may post updates here
+# Updates
+
+## Upd 1
+
+Wow, this blew up! Thanks a lot for the nice comments, it was pleasing to see all this feedback
+
+### Trivia
+
+- This leaked document is a part of [Halloween documents](https://en.m.wikipedia.org/wiki/Halloween_documents)
+- As a result of [Iowa anti-monopaly class action lawsuit](https://en.m.wikipedia.org/wiki/Microsoft_litigation#cite_note-21), MS settled the case for $180M, which is only 0.3% of their [revenue in 2007](https://www.microsoft.com/investor/reports/ar07/staticversion/10k_sl_eng.html). This lawsuit seems not to be directly linked to the Halloween documents AFAIK
+- In EU, reverse engineeriny is not illegal if done properly (see clean room approach)
+
+Another engineer has encountered similar ACPI issues in the past, here's the link to his detailed guide on fixing DSDT tables: [antenore blogpost](https://antenore.simbiosi.org/fixing-broken-acpi-dsdt-linux/)
+
+The user `u/BitOBear` posted a detailed story of [Microsoft inner management practices of that time](https://www.reddit.com/r/linux/comments/1l2rn3t/oc_how_i_discovered_that_bill_gates_monopolized/mvysmws/). Bizarre stuff
+
+Overall, I'm going to report the bug to Valve soon! Stay tuned
