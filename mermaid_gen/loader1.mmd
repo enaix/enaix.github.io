@@ -1,0 +1,10 @@
+flowchart LR;
+  target["Target APK"]
+  target-->MainAct["Main activity"]
+  subgraph Loader  
+  MainAct-->Manifest["Manifest parser"]
+  MainAct-->decomp["Bytecode analyzer"]
+  MainAct-->ActLoader["Activity loader"]
+  ActLoader-->exec["Execution"]
+  end
+
