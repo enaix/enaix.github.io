@@ -19,7 +19,7 @@ As you all know, Google has introduced developer verification as a way to preven
 
 
 
-## Why is this bad
+## Why this is bad
 
 This has already been discussed by [ArsTechnica](https://arstechnica.com/gadgets/2025/10/google-confirms-android-dev-verification-will-have-free-and-paid-tiers-no-public-list-of-devs/) and on some threads (some cherry-picked ones): [reddit](https://old.reddit.com/r/Android/comments/1nwddik/heres_how_androids_new_app_verification_rules/), [ycombinator](https://news.ycombinator.com/item?id=45017028), [hackaday](https://hackaday.com/2025/08/26/google-will-require-developer-verification-even-for-sideloading/).
 

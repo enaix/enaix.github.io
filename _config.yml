@@ -28,8 +28,8 @@ header_pages:
   - about.md
 
 # Build settings
-# remote_theme: b2a3e8/jekyll-theme-console
-theme: jekyll-theme-console
+remote_theme: enaix/jekyll-theme-console
+# theme: jekyll-theme-console
 style: light
 plugins:
   - jekyll-feed
