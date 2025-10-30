@@ -10,5 +10,5 @@
       "secondaryTextColor": "#000000",
       "tertiaryTextColor": "#000000"
     },
-    "themeCSS": "#my-svg: {background-color: #0000!important;}"
+    "themeCSS": "#my-svg: {background-color: #00000000!important;}"
 }
