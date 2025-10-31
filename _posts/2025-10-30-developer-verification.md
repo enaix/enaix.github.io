@@ -36,7 +36,7 @@ A few months prior Google has decided to [make Android development private](http
 
 My answer to this question is that it would simply prevent small developers from distributing their apps, including myself. If we take the legal route, a hobbyist license is supposed to have some limit on the number of installs by design. If we take, say, 10K installs, this is not enough in my case. Another question is how exactly the process of verification is going to happen, what if Google adopts the same rules as in Play Store? Taking my [fork of the old VN engine port](https://github.com/enaix/Kirikiroid2-debloated), this apk would not pass security checks, as the old codebase relies on legacy external storage permissions, which are banned in Play Store. If we take the adb route, there are **no guarantees that this method is going to work in the future in the form you expect**. For instance, Google mentions that this method is meant for on-device tests during development, and nothing prevents them from reporting the install to their servers and checking if a self-signed apk has been installed on other devices. Another way to put it, this is problematic for an average Android user to perform these steps, and this is going to be the developer's problem.
 
-The situation links pretty well with Samsung [removing sideloading with the One UI 8 update](https://www.sammobile.com/news/say-goodbye-to-your-custom-roms-as-one-ui-8-kills-bootloader-unlock/). Great, duh...
+The situation links pretty well with Samsung [removing bootloader unlocking with the One UI 8 update](https://www.sammobile.com/news/say-goodbye-to-your-custom-roms-as-one-ui-8-kills-bootloader-unlock/). Great, duh...
 
 ## The concept
 
