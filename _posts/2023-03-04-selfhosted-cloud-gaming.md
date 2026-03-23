@@ -1,5 +1,6 @@
 ---
 layout: post
+short_path: gaming.md
 title: Selfhosted cloud gaming using steam link
 date:   2023-03-04 12:21:13 +0300
 calegories: linux networking

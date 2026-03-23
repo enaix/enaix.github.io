@@ -3,4 +3,6 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+title: /bin/etd
+short_path: /bin/etd
 ---

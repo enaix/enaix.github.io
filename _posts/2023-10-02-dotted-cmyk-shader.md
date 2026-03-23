@@ -1,5 +1,6 @@
 ---
 layout: post
+short_path: shader.md
 title: Writing stylized dotted comic shader in Godot
 date:   2023-10-02 17:26:32 +0300
 has_repo: true

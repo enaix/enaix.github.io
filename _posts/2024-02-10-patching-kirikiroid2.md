@@ -1,5 +1,6 @@
 ---
 layout: post
+short_path: kiri.md
 title: Patching chinese adware from Kirikiroid2 apk
 categories: decompilation smali
 has_repo: true

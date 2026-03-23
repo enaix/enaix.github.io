@@ -18,13 +18,14 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: // enaix blog
+title: enaix blog
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://enaix.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 footer: 'github: <a href="https://github.com/enaix">~enaix</a>'
 
 header_pages:
   - index.md
+  - links.md
   - about.md
 
 # Build settings

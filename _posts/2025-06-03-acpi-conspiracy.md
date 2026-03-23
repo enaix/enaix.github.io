@@ -1,5 +1,6 @@
 ---
 layout: post
+short_path: acpi.md
 title: How I discovered that Bill Gates monopolized ACPI in order to break Linux
 has_repo: true
 repo_author: enaix

@@ -1,5 +1,6 @@
 ---
 layout: post
+short_path: hyperx.md
 title: Fixing HyperX RGB DRAM color glitch
 has_repo: true
 repo_author: enaix

@@ -1,6 +1,7 @@
 ---
 layout: page
-title: About
+short_path: about.md
+title: about
 permalink: /about/
 ---
 

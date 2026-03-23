@@ -28,7 +28,8 @@ h6::before { content: "> " }
 p, ul, ol { margin: 0px;  color: var(--text-color); }
 a { text-decoration: underline;  color: var(--link-color); }
 a:hover { color: var(--background-color); background-color: var(--base-color); }
-@media only screen and (max-device-width: 500px) { * { font-size: $mobile-font-size !important; } .footer-junk { display: none!important; } }
+@media only screen and (max-device-width: 650px) { * { .footer-junk { display: none!important; } } }
+@media only screen and (max-device-width: 750px) { * { font-size: $mobile-font-size !important; } }
 img { width: min(100%, 1000px); }
 p { font-family: $p-font-family; font-size: large; }
 
@@ -76,10 +77,14 @@ video { width: 80%; }
  * Header/Navigation
  */
  .menu-wrapper { border-top: var(--border);  border-bottom: var(--border); margin-bottom: 25px; padding-top: 12px; padding-bottom: 12px }
-.menu {  background-color: var(--bg-2); }
-.menu .site-title { font-size: x-large }
+.menu {  background-color: var(--bg-2); padding-left: 3px; padding-right: 3px; }
+.menu .site-title { font-size: x-large; }
+.menu .cur-tab { background-color: var(--background-color); color: var(--base-color); }
+.close-tab { font-size: large; vertical-align: middle; padding-bottom: 3px; }
+@media only screen and (max-device-width: 425px) { .tab-medium-priority { display: none!important; } }
+@media only screen and (max-device-width: 550px) { .tab-low-priority { display: none!important; } }
 .menu ul { margin-bottom: 12px;  padding-left: 0px;  list-style-type: none;  text-align: right; float: right; font-size: x-large }
-.menu ul li { display: inline;  margin-left: 10px; }
+.menu ul li { display: inline;  margin-left: 20px; }
 .menu ul li a { text-decoration: none;  color: var(--text-color-minor); }
 .menu ul li a:hover { text-decoration: none; color: var(--background-color); background-color: var(--base-color); }
 

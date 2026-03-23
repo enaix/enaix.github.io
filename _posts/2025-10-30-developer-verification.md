@@ -1,5 +1,6 @@
 ---
 layout: post
+short_path: dev_verify.md
 title: A theoretical way to circumvent Android developer verification
 has_repo: true
 repo_author: enaix
