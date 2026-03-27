@@ -314,3 +314,99 @@ main {
   background-color: var(--background-color);
   color: var(--text-color);
 }
+
+/**
+ * TUI window
+ */
+
+.tui-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tui-window {
+  position: relative;
+  max-width: 800px;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  overflow: hidden;
+  border: var(--border);
+}
+
+.tui-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: calc(min(600px, 80%));
+  width: 100%;
+}
+
+@media only screen and (max-device-width: 750px) {
+  .tui-content .tui-title {
+    font-size: xx-large !important;
+  }
+}
+
+.tui-content .tui-title {
+  font-family: serif;
+  font-size: xxx-large;
+}
+
+.tui-content .tui-text {
+  font-family: $p-font-family;
+  font-size: medium;
+}
+
+.tui-content .tui-emph {
+  font-weight: bold;
+}
+
+.tui-content p {
+  text-align: left;
+  width: 100%;
+}
+
+.lines {
+  position: absolute;
+  //top: 25%;
+  left: 85%;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  //justify-content: space-evenly;
+  pointer-events: none;
+}
+
+.line {
+  width: 2px;
+  height: 20%;
+  margin-right: 7px;
+  background: currentColor;
+  transition: height 0.3s ease;
+  pointer-events: auto;
+}
+
+.line-1 { background-color: var(--yellow-fg); }
+.line-2 { background-color: var(--blue-fg); }
+.line-3 { background-color: var(--green-fg); }
+.line-4 { background-color: var(--red-fg); }
+
+.line:hover {
+  height: calc(20% + 2rem);
+}
+
+.line.extend-bottom {
+  height: 100%;
+}
+
+.tui-buttons {
+  position: absolute;
+  bottom: 5%;
+}
