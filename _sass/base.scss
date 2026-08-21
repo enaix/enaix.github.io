@@ -514,7 +514,7 @@ main {
   //flex-wrap: wrap;
   gap: 10px; /* Optional: space between rows */
   margin-top: 20px;
-  margin-bottom: 20px;
+  //margin-bottom: 20px;
   justify-content: left;
 
   scrollbar-width: thin;
@@ -524,4 +524,11 @@ main {
 
 .thoughts-matrix-ctrl {
   width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.thoughts-ctrl-right {
+  position: absolute;
+  right: 0;
 }

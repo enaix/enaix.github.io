@@ -10,7 +10,7 @@ layout: default
 <div class="thoughts-matrix">
 {%- for th in site.thoughts -%}
 <!--<p><a href="{{ th.url | relative_url }}">{{ th.title }}</a></p>-->
-  <div class="col-img" style="background-image: url({{ th.img_preview }});">
+  <div class="col-img" style="background-image: url({{ th.img_preview }});" id="matrix_{{ th.name_short }}">
     <div class="matrix-info">
       <span class="matrix-title">{{ th.title }}</span>
       <span class="matrix-subtitle">{{ th.bottom_text }}</span>
@@ -20,6 +20,12 @@ layout: default
     </div>
   </div>
 {%- endfor -%}
+</div>
+<div class="thoughts-matrix-ctrl">
+  {%- assign t_first = site.thoughts | first -%}
+  {%- assign t_last = site.thoughts | last -%}
+  <a class="go-link" href="#matrix_{{ t_first.name_short }}">&lt; left</a>
+  <a class="go-link thoughts-ctrl-right" href="#matrix_{{ t_last.name_short }}">right &gt;</a>
 </div>
 {%- endif -%}
 
