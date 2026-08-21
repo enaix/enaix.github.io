@@ -29,7 +29,7 @@ p, ul, ol { margin: 0px;  color: var(--text-color); }
 a { text-decoration: underline;  color: var(--link-color); }
 a:hover { color: var(--background-color); background-color: var(--base-color); }
 @media only screen and (max-device-width: 650px) { * { .footer-junk { display: none!important; } } }
-@media only screen and (max-device-width: 750px) { * { font-size: $mobile-font-size !important; } }
+@media only screen and (max-device-width: 800px) { * { font-size: $mobile-font-size !important; } }
 img { width: min(100%, 1000px); }
 p { font-family: $p-font-family; font-size: large; }
 
@@ -55,6 +55,8 @@ main>mjx-container { margin: 50px; }
 p { word-wrap: break-word;  word-break: break-word;  white-space: pre-wrap; margin-bottom: 15px; }
 footer { color: var(--text-color);  border-top: var(--border); margin: 20px auto 15px; padding-top: 10px; }
 .footer-links { text-align: right; float: right; }
+.footer-rss { margin-right: 10px; display: inline-flex; }
+.footer-rss>img { margin-left: 5px; width: 1rem; }
 header { margin-top: 25px;  margin-bottom: 10px; }
 header p { text-align: left;  margin: 0; }
 footer { margin-bottom: 20px; }
@@ -304,6 +306,20 @@ main {
   font-size: 1.3em;
 }
 
+.go-link-wrapper {  // Only present in links.md
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+}
+.go-link-wrapper:hover {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+.go-link-wrapper:hover>span {  // We overload the childrens' color property
+  background-color: var(--background-color)!important;
+  color: var(--text-color)!important;
+}
+
 .go-link {
   background-color: var(--text-color);
   color: var(--background-color);
@@ -314,6 +330,14 @@ main {
   background-color: var(--background-color);
   color: var(--text-color);
 }
+
+// Same as go-link, but without hover effect
+.go-link-no-hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+  text-decoration: none;
+}
+
 
 /**
  * TUI window
@@ -409,4 +433,95 @@ main {
 .tui-buttons {
   position: absolute;
   bottom: 5%;
+}
+
+/**
+ * Thoughts/links
+ */
+
+.thought_upd_wrapper {
+  border-left: var(--border);
+  padding-left: 20px;
+}
+
+.thought_date::before {
+  content: url("/assets/icons/thought-dot.svg");
+  position: absolute;
+  left: calc(-20px - 8px);
+  //line-height: 15px;
+  bottom: -4px;
+  width: 15px;
+}
+
+.thought_date {
+  position: relative;
+  left: 0;
+  top: 0;
+  color: var(--text-color-minor);
+}
+
+.col-img {
+  width: min(20vw, 250px);
+  height: min(20vw, 250px);
+  min-width: 260px;
+  min-height: 260px;
+  align-items: center;
+  justify-content: center;
+  //border: 1px solid #ddd;
+  box-sizing: border-box;
+  text-align: center;
+  display: grid;
+  border: var(--border);
+
+  position: relative;
+  top: 0;
+  left: 0;
+  padding-top: 60px;
+  background-size: 0;
+  background-repeat: no-repeat;
+}
+
+.col-img:hover {
+  color: var(--background-color);
+  background-color: var(--text-color);
+}
+
+.col-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: inherit;
+  background-position: 0 0;
+  background-size: 100%;
+  width: 100%;
+  height: 30%;
+}
+
+.col-img:hover::before {
+  //filter: invert(100%);
+  filter: invert(100%) brightness(30%);
+}
+
+.no-before::before {
+  content: ""!important;
+}
+
+.thoughts-matrix {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  //flex-wrap: wrap;
+  gap: 10px; /* Optional: space between rows */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: left;
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-color) var(--background-color);
+  padding-bottom: 10px;
+}
+
+.thoughts-matrix-ctrl {
+  width: 100%;
 }

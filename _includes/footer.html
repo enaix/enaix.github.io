@@ -2,10 +2,14 @@
     <span class="title bg-1 light-text">| NORMAL |</span>
 
     <div class="footer-junk">
+        {%- if page.short_path -%}
+        <span class="title light-text">[ {{ page.short_path }} ]</span>
+        {%- else -%}
         <span class="title light-text">[ {{ page.path }} ]</span>
+        {%- endif -%}
 
         <span class="title light-text"> unix | utf-8 | markdown</span>
     </div>
 
-    <span class="footer-links">{{ site.footer }}</span>
+    <span class="footer-links"><a href="/feed.xml" class="footer-rss">RSS<img src="/assets/icons/rss.svg" alt="rss"></a> {{ site.footer }}</span>
 </footer>

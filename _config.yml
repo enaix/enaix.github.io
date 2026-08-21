@@ -21,7 +21,7 @@
 title: enaix blog
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://enaix.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-footer: 'github: <a href="https://github.com/enaix">~enaix</a>'
+footer: 'gh: <a href="https://github.com/enaix">~enaix</a>'
 
 header_pages:
   - index.md
@@ -38,6 +38,20 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 markdown: kramdown
+
+collections:
+  thought_updates:
+    output: false
+  thoughts:
+    output: true
+
+feed:
+  posts_limit: 50
+  collections:
+    thoughts:
+      path: "/thoughts.xml"
+    thought_updates:
+      path: "/thought_updates.xml"
 
 defaults:
   - scope:

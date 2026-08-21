@@ -2,4 +2,33 @@
 layout: default
 ---
 
-<p>UNDER CONSTRUCTION</p>
+<!-- <p>UNDER CONSTRUCTION</p> -->
+
+<h2>thoughts</h2>
+
+{%- if site.thoughts.size > 0 -%}
+<div class="thoughts-matrix">
+{%- for th in site.thoughts -%}
+<!--<p><a href="{{ th.url | relative_url }}">{{ th.title }}</a></p>-->
+  <div class="col-img" style="background-image: url({{ th.img_preview }});">
+    <div class="matrix-info">
+      <span class="matrix-title">{{ th.title }}</span>
+      <span class="matrix-subtitle">{{ th.bottom_text }}</span>
+      <div class="matrix-link">
+        <span class="go-left">&gt;</span><a href="{{ th.url | relative }}" class="go-link-wrapper"><span>open </span> <span class="go-link-no-hover">{{ th.name_short }}</span></a><span class="go-right">&lt;</span>
+      </div>
+    </div>
+  </div>
+{%- endfor -%}
+</div>
+{%- endif -%}
+
+<h2>thought_updates</h2>
+{%- if site.thought_updates.size > 0 -%}
+<div class="thought_upd_wrapper">
+{%- for tu in site.thought_updates -%}
+{%- assign t = site.thoughts | where_exp:"thought", "thought.title == tu.t_title" | first -%}
+<p><span class="thought_date">{{ tu.date | date: '%d %b %Y' }} </span> <a href="{{ t.url | relative_url }}#{{ tu.name_short }}">{{ tu.title }}</a> <a href="{{ t.url | relative_url }}#{{ tu.name_short }}" class="go-link">{{ tu.t_name_short }}</a></p>
+{%- endfor -%}
+</div>
+{%- endif -%}

@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<div class="page-title-wrapper">
+    <h1 class="title title-fit bg-1">{{ page.title }}</h1>  <!-- ./thoughts should already be included in the full name -->
+    <h3 class="no-before">{{ page.bottom_text }}</h3>
+</div>
+
+{{ content }}
+
+{%- if site.thought_updates.size > 0 -%}
+{%- for tu in site.thought_updates -%}
+{%- if tu.t_name_short == page.name_short -%}
+<h3 id="{{ tu.name_short }}">{{ tu.title }}</h3>
+<p>{{ tu.content }}</p>
+{% endif %}
+{%- endfor -%}
+{%- endif -%}
