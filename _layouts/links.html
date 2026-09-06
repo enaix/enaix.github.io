@@ -4,7 +4,7 @@ layout: default
 
 <!-- <p>UNDER CONSTRUCTION</p> -->
 
-<h2>thoughts</h2>
+<h2>./thoughts</h2>
 
 {%- if site.thoughts.size > 0 -%}
 <div class="thoughts-matrix">
@@ -29,12 +29,21 @@ layout: default
 </div>
 {%- endif -%}
 
-<h2>thought_updates</h2>
+<h2>./thought_updates</h2>
 {%- if site.thought_updates.size > 0 -%}
 <div class="thought_upd_wrapper">
 {%- for tu in site.thought_updates -%}
 {%- assign t = site.thoughts | where_exp:"thought", "thought.title == tu.t_title" | first -%}
-<p><span class="thought_date">{{ tu.date | date: '%d %b %Y' }} </span> <a href="{{ t.url | relative_url }}#{{ tu.name_short }}">{{ tu.title }}</a> <a href="{{ t.url | relative_url }}#{{ tu.name_short }}" class="go-link">{{ tu.t_name_short }}</a></p>
+
+<p>
+  {%- if tu.fake_date -%}
+  <span class="thought_date">{{ tu.fake_date }} </span>
+  {%- else -%}
+  <span class="thought_date">{{ tu.date | date: '%d %b %Y' }} </span>
+  {%- endif -%}
+
+  <a href="{{ t.url | relative_url }}#{{ tu.name_short }}">{{ tu.title }}</a> <a href="{{ t.url | relative_url }}#{{ tu.name_short }}" class="go-link">{{ tu.t_name_short }}</a>
+</p>
 {%- endfor -%}
 </div>
 {%- endif -%}
