@@ -46,10 +46,10 @@ function executeFetch(owner, repo)
   .then(function(stars) {
     if (stars !== null) {
       console.log(`The repository ${owner}/${repo} has ${stars} stars.`);
-      
+
       toggleVisibility(document.getElementById("div-" + repo), true);
       document.getElementById("star-" + repo).innerHTML = stars;
-      if (stars % 10 == 1 && stars % 100 != 11) // Ends with 1, but not with 11
+      if (stars == 1)
       {
         toggleVisibility(document.getElementById("star-s-" + repo), false); // star
       }
