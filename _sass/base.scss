@@ -51,7 +51,9 @@ p { font-family: $p-font-family; font-size: large; }
   box-shadow: 0 0.4em 0 #000, 0 0 0 #000;
   //line-height: 1.25;
 }
-.title-black::before { content: "" }
+.title-black::before { content: ""; }
+//.title-black::after { content: "🬶🬪🬤🬖🬟"; color: black; background-color: var(--background-color); font-size: 1.5rem; }
+.title-black-symbols { font-size: 2rem; }
 
 .bg-1 { background-color: var(--bg-1); }
 .bg-2 { background-color: var(--bg-2); }

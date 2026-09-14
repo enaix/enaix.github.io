@@ -58,7 +58,7 @@ function executeFetch(owner, repo)
         toggleVisibility(document.getElementById("star-s-" + repo), true); // stars
       }
     } else {
-      console.log('Failed to fetch stars for repo ${owner}/${repo}');
+      console.log(`Failed to fetch stars for repo ${owner}/${repo}`);
       toggleVisibility(document.getElementById("div-" + repo), false);
     }
   })
