@@ -9,6 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
   if (spans.length != 1) { return; }
 
   const char_candidates = ["🬶🬣🬟", "🬶🬤🬖", "🬯🬣🬢", "🬙🬱🬧", "🬜🬮🬌", "🬷🬤🬦", "🬗🬧", "🬅🬷🬅"];
+  /*
+   * Python script to generate random strings like this
+   * >>> _ = [print(''.join([chr(0x1FB00 + random.randint(0,59)) for x in range(random.randint(1,3))]),end="\n\n") for x in range(20)]
+   */
 
   // A very stupid hash function (sum and mod)
   let title_hash = Math.sumPrecise(titles.innerHTML.split("").map(char => char.toUpperCase().charCodeAt(0) - 64)) % char_candidates.length;
