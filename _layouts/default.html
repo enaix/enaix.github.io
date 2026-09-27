@@ -18,5 +18,34 @@
 
     </div>
     <script type="text/javascript" src="/assets/js/image-preview.js"></script>
+    <script type="text/javascript" src="/assets/js/symbols.js"></script>
+    <script type="text/javascript">
+     document.addEventListener('DOMContentLoaded', function(){
+       // RSS TUI LOGIC
+       // =============
+
+       // Disable fallback nojs link, so that the TUI window opens instead
+       const rss_btn = document.getElementById('rss-btn');
+       const overlay = document.getElementById('overlay');
+       const rss_tui = document.getElementById('rss-tui');
+       rss_btn.setAttribute("href", "#rss-tui");
+
+       rss_btn.addEventListener('click', function(){
+         rss_tui.classList.remove('hidden');
+         overlay.classList.add('active');
+       });
+
+       const rss_close_btn = document.getElementById('rss-close-btn');
+       rss_close_btn.addEventListener('click', function(){
+         rss_tui.classList.add('hidden');
+         overlay.classList.remove('active');
+       });
+
+      overlay.addEventListener('click', function(){
+        overlay.classList.remove('active');  // already present in the img preview script, but we still need this
+        rss_tui.classList.add('hidden');
+      });
+     });
+    </script>
   </body>
 </html>

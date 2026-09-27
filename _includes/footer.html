@@ -1,11 +1,29 @@
 <footer>
+
+    <div id="rss-tui" class="tui-popup hidden">
+        <div class="tui-content">
+            <p>This blog has the following RSS feeds:</p>
+            <p><a href="/feed.xml" class="go-link">/feed.xml</a>: main feed</p>
+            <p><a href="/thoughts.xml" class="go-link">/thoughts.xml</a>: new thoughts</p>
+            <p><a href="/thought_updates.xml" class="go-link">/thought_updates.xml</a>: individual thought updates</p>
+            <div class="matrix-link tui-buttons">
+                <span class="go-left">&gt;</span><a href="#rss-tui" class="go-link" id="rss-close-btn">close</a><span class="go-right">&lt;</span>
+                <span class="go-left">&gt;</span><a href="/rss" class="go-link">why</a><span class="go-right">&lt;</span>
+            </div>
+        </div>
+    </div>
+
     <span class="title bg-1 light-text">| NORMAL |</span>
 
     <div class="footer-junk">
-        <span class="title light-text">[ {{ page.path }} ]</span>
+        {%- if page.short_path -%}
+            <span class="title light-text">[ {{ page.short_path }} ]</span>
+        {%- else -%}
+            <span class="title light-text">[ {{ page.path }} ]</span>
+        {%- endif -%}
 
         <span class="title light-text"> unix | utf-8 | markdown</span>
     </div>
 
-    <span class="footer-links">{{ site.footer }}</span>
+    <span class="footer-links"><a id="rss-btn" href="/rss" class="footer-rss">RSS<img src="/assets/icons/rss.svg" alt="rss"></a> {{ site.footer }}</span>
 </footer>

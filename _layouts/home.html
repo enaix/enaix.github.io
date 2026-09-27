@@ -12,9 +12,10 @@ layout: default
 {%- assign date_format = "%d.%m.%y" -%}
   <div class="post-title">
     <a href="{{ post.url | relative_url }}" class="home-title">{{ post.title | escape }}</a>
-
-    {%- if post.has_repo -%}
-    <span class="post-stars">{% include star_counter.html author=post.repo_author repo=post.repo %}</span>
+    {%- if post.has_repo -%}<div class="home-post-bottom"><span class="post-stars">{% include star_counter.html author=post.repo_author repo=post.repo %}</span>
+    <span class="post-date">{{ post.date | date: '%d %b %Y' }}</span></div>
+    {%- else -%}
+    <div class="home-post-bottom"><span>.</span><span class="post-date">{{ post.date | date: '%d %b %Y' }}</span></div>
     {%- endif -%}
   </div>
 
