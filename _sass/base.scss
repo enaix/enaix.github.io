@@ -418,6 +418,27 @@ main {
   width: 100%;
 }
 
+.tui-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  //margin-top: -50px;
+  //margin-left: -50px;
+  transform: translate(-50%, -50%);
+
+  width: 70vw;
+  max-width: 800px;
+  height: 50vh;
+  z-index: 20;
+
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: var(--border);
+}
+
 .lines {
   position: absolute;
   //top: 25%;
