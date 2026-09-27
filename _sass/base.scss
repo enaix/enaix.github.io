@@ -34,6 +34,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 @media only screen and (max-device-width: 800px) {
   * { font-size: $mobile-font-size !important; }
   .title-black { line-height: 1.0!important; }
+  .page-title-thought::before { max-height: 116px; }
 }
 img { width: min(100%, 1000px); }
 p { font-family: $p-font-family; font-size: large; }
@@ -544,6 +545,11 @@ main {
   //filter: invert(100%);
   filter: invert(100%) brightness(30%);
 }
+
+
+.page-title-thought { position: relative; background-repeat: no-repeat; background-size: 0; padding-top: 100px; }
+.page-title-thought::before { content: ""; position: absolute; top: 0; left: 0; background-image: inherit; background-position: 0 0; background-size: 100%; filter: invert(100%) brightness(30%); width: 100%; height: 70%; z-index: -1; }
+
 
 .no-before::before {
   content: ""!important;
