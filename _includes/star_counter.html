@@ -1,6 +1,7 @@
-<a id="div-{{ include.repo }}" class="stars-display stars-hidden" href="https://github.com/{{ include.author }}/{{ include.repo }}">
+<a id="div-{{ include.repo }}" class="stars-display hidden" href="https://github.com/{{ include.author }}/{{ include.repo }}">
     <img src="/assets/icons/star.svg" alt="github star" class="star-icon">
     <span id="star-{{ include.repo }}">0</span>
     <span> star</span><span id="star-s-{{ include.repo }}">s</span>
 </a>
+<span id="dot-{{ include.repo }}">.</span>
 <script src="/assets/js/github-stars.js" owner="{{ include.author }}" repo="{{ include.repo }}"></script>

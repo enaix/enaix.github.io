@@ -32,11 +32,11 @@ function toggleVisibility(elem, show)
 {
     if (show)
     {
-        elem.classList.remove("stars-hidden")
+        elem.classList.remove("hidden")
     }
     else
     {
-        elem.classList.add("stars-hidden")
+        elem.classList.add("hidden")
     }
 }
 
@@ -57,14 +57,17 @@ function executeFetch(owner, repo)
       {
         toggleVisibility(document.getElementById("star-s-" + repo), true); // stars
       }
+      toggleVisibility(document.getElementById("dot-" + repo), false);  // hide the dot
     } else {
       console.log(`Failed to fetch stars for repo ${owner}/${repo}`);
       toggleVisibility(document.getElementById("div-" + repo), false);
+      toggleVisibility(document.getElementById("dot-" + repo), true);  // show the dot
     }
   })
   .catch(function(error) {
     console.error('Error fetching stars:', error);
     toggleVisibility(document.getElementById("div-" + repo), false);
+    toggleVisibility(document.getElementById("dot-" + repo), true);  // show the dot
   });
 }
 
