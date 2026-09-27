@@ -1,6 +1,10 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@font-face {
+  font-family: 'LegacyComputing';
+  src: url('/assets/fonts/LegacyComputing.ttf') format('truetype');
+}
 
 /**
  * Style variables
@@ -57,7 +61,7 @@ p { font-family: $p-font-family; font-size: large; }
 }
 .title-black::before { content: ""; }
 //.title-black::after { content: "🬶🬪🬤🬖🬟"; color: black; background-color: var(--background-color); font-size: 1.5rem; }
-.title-black-symbols { font-size: 2rem; }
+.title-black-symbols { font-size: 2rem; font-family: 'LegacyComputing'; }
 
 .bg-1 { background-color: var(--bg-1); }
 .bg-2 { background-color: var(--bg-2); }
