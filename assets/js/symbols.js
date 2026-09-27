@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
    */
 
   // A very stupid hash function (sum and mod)
-  let title_hash = Math.sumPrecise(titles.innerHTML.split("").map(char => char.toUpperCase().charCodeAt(0) - 64)) % char_candidates.length;
+  let bytes = titles.innerHTML.split("").map(char => char.toUpperCase().charCodeAt(0) - 64);
+  let title_hash = bytes.reduce((acc, v) => acc + v, 0) % char_candidates.length;
   console.log(`Title has hash ${title_hash}`);
   spans[0].innerHTML = char_candidates[title_hash];
 });
